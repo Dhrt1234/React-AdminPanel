@@ -1,6 +1,9 @@
 import React from 'react'
 import { HiBars3 } from "react-icons/hi2";
-import { FaUser } from "react-icons/fa";
+import {FaLock } from "react-icons/fa";
+import { Link } from "react-router";
+import { FaCircleUser } from "react-icons/fa6";
+import { RiProfileFill } from "react-icons/ri";
 
 export default function Header() {
   return (
@@ -17,29 +20,36 @@ export default function Header() {
         <HiBars3 className='text-3xl h-8' />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Dashboard</span>
     </a>
-    <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm
-     text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
-      dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" 
-      aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <FaUser className='text-3xl' />
-    </button>
-    <div class="hidden w-full" id="navbar-hamburger">
-      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm dark:bg-blue-600" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Contact</a>
-        </li>
-      </ul>
-    </div>
+       <div className="group relative  z-50">
+            <img
+              src="../images/User_Profile.jpeg"
+              className="rounded-full w-11 h-11 object-cover"
+              alt=""
+            />
+            <div className="hidden group-hover:block absolute top-[45px] left-[-150px] bg-[#fff] shadow-md border rounded-[10px] z-50">
+              <ul>
+                <Link
+                  to="/profile"
+                  className="flex items-center gap-2 font-[500] py-1 pl-3 hover:bg-[#F1F4F5] hover:text-[blue] rounded-[10px_10px_0_0]"
+                >
+                  <FaCircleUser /> Profile
+                </Link>
+                <hr className="border-[#00000076]" />
+                <Link
+                  to="/company_profile"
+                  className="flex items-center gap-2 font-[500] py-1 pl-3 pr-5 hover:bg-[#F1F4F5] hover:text-[blue]"
+                >
+                  <RiProfileFill />
+                  Company Profile
+                </Link>
+                <hr />
+                <div className="flex items-center gap-2 font-[500] py-1 pl-3 pr-5 hover:bg-[#F1F4F5] hover:text-[blue] cursor-pointer rounded-[0px_0px_10px_10px]">
+                  <FaLock />
+                  LogOut
+                </div>
+              </ul>
+            </div>
+          </div>
   </div>
 </nav>
 

@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router'
 import { FaFilter } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
-
+import TableHeader from '../../common/TableHeader';
 export default function Contact_Enquiry() {
+     const linkName = "Contact Enquiry Management"; 
   return (
     <div>
          <section className='w-full'>
@@ -21,7 +22,8 @@ export default function Contact_Enquiry() {
                 <div className='border-b-2 text-gray-300'></div>
                 <div className='w-full min-h-[620px]'>
                     <div className='max-w-[1220px] mx-auto py-5'>
-                        <div className='flex items-center justify-between bg-slate-100 py-3 px-4 border rounded-t-md border-slate-400'>
+                          <TableHeader linkName={linkName} />
+                  {/*       <div className='flex items-center justify-between bg-slate-100 py-3 px-4 border rounded-t-md border-slate-400'>
 
                             <h3 className='text-[26px] font-semibold'>Contact Enquiry Management</h3>
                             <div className='flex justify-between'>
@@ -35,7 +37,7 @@ export default function Contact_Enquiry() {
                                     Delete
                                 </button>
                             </div>
-    </div>
+    </div> */}
     <div className='border border-slate-400 border-t-0 rounded-b-md'>
 
     <div className='overflow-x-auto'>

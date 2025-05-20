@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router'
 import { FaFilter } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
-
+import TableHeader from '../../common/TableHeader';
 export default function View_Slider() {
+    
+   const linkName = "View Slider"; 
   return (
     <div>
    <section className='w-full'>
@@ -21,21 +23,7 @@ export default function View_Slider() {
                 <div className='border-b-2 text-gray-300'></div>
                 <div className='w-full min-h-[620px]'>
                     <div className='max-w-[1220px] mx-auto py-5'>
-                        <div className='flex items-center justify-between bg-slate-100 py-3 px-4 border rounded-t-md border-slate-400'>
-
-                            <h3 className='text-[26px] font-semibold'>View Slider</h3>
-                            <div className='flex justify-between'>
-                                <div className='cursor-pointer text-white w-[40px] h-[40px] rounded-lg bg-blue-700 hover:bg-blue-900  mx-3'>
-                                <FaFilter className='text-white my-3  mx-2.5' />
-                                </div>
-                                <button className='text-white font-medium px-4 bg-green-700 rounded-lg focus:outline-none hover:bg-green-900'>
-                                    Change Status
-                                </button>
-                                <button className='text-white font-medium px-4 mx-4 bg-red-700 rounded-lg focus:outline-none hover:bg-red-900'>
-                                    Delete
-                                </button>
-                            </div>
-    </div>
+                      <TableHeader linkName={linkName} />
     <div className='border border-slate-400 border-t-0 rounded-b-md'>
 
     <div className='overflow-x-auto'>

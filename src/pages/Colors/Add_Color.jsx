@@ -6,6 +6,7 @@ import "react-color-palette/css";
 
 export default function add_color() {
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [color, setColor] = useColor("#561ecb");
   return (
     <div>

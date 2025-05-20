@@ -5,6 +5,9 @@ import $ from "jquery";
 import "dropify/dist/js/dropify.min.js";
 import "dropify/dist/css/dropify.min.css";
 
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
 export default function Add_Product() {
 
 
@@ -103,47 +106,47 @@ export default function Add_Product() {
                                         <label for="order" className='p-1 block font-medium text-gray-900'>Select Sub Category</label>
                                         <select name='subCatName' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Select Sub Category</option>
-                                                                <option value='Mens'>Men's</option>
-                                                                <option value='Women'>Women</option>
-                                                                <option value='Mobile'>Mobile</option>
-                                                                <option value='Laptops'>Laptops</option>
-                                                             </select>
+                                            <option>Select Sub Category</option>
+                                            <option value='Mens'>Men's</option>
+                                            <option value='Women'>Women</option>
+                                            <option value='Mobile'>Mobile</option>
+                                            <option value='Laptops'>Laptops</option>
+                                        </select>
                                     </div>
                                     <div className='mb-5 p-1'>
                                         <label for="name" className='p-1 block font-medium text-gray-900'>Select Material </label>
                                         <select name='material_name' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Select Material</option>
-                                                                <option value='Cotton'>Cotton</option>
-                                                                <option value='Plastic'>Plastic</option>
-                                                                <option value='Diamond'>Diamond</option>
-                                                                <option value='Polyster'>Polyster</option>
-                                                             </select>
+                                            <option>Select Material</option>
+                                            <option value='Cotton'>Cotton</option>
+                                            <option value='Plastic'>Plastic</option>
+                                            <option value='Diamond'>Diamond</option>
+                                            <option value='Polyster'>Polyster</option>
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
                                         <label for="order" className='p-1 block font-medium text-gray-900'>Select Product Type</label>
                                         <select name='product_type' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Select Product Type</option>
-                                                                <option value='Featured'>Featured</option>
-                                                                <option value='New Arrivals'>New Arrivals</option>
-                                                                <option value='No Sale'>No Sale</option>
-                                                               
-                                                             </select>
+                                            <option>Select Product Type</option>
+                                            <option value='Featured'>Featured</option>
+                                            <option value='New Arrivals'>New Arrivals</option>
+                                            <option value='No Sale'>No Sale</option>
+
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
                                         <label for="name" className='p-1 block font-medium text-gray-900'>Is Top Rated </label>
                                         <select name='top_rated' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Nothing Selected</option>
-                                                                <option value='Yes'>Yes</option>
-                                                               
-                                                                <option value='No'>No</option>
-                                                               
-                                                             </select>
+                                            <option>Nothing Selected</option>
+                                            <option value='Yes'>Yes</option>
+
+                                            <option value='No'>No</option>
+
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
@@ -163,55 +166,55 @@ export default function Add_Product() {
                                         <label for="name" className='p-1 block font-medium text-gray-900'>Select Parent Category  </label>
                                         <select name='parentCatName' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Parent Category</option>
-                                                                <option value='Mens'>Men's</option>
-                                                                <option value='Women'>Women</option>
-                                                                <option value='Mobile'>Mobile</option>
-                                                                <option value='Laptops'>Laptops</option>
-                                                             </select>
+                                            <option>Parent Category</option>
+                                            <option value='Mens'>Men's</option>
+                                            <option value='Women'>Women</option>
+                                            <option value='Mobile'>Mobile</option>
+                                            <option value='Laptops'>Laptops</option>
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
                                         <label for="order" className='p-1 block font-medium text-gray-900'>Select Sub Sub Category</label>
                                         <select name='subCatName2' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Sub Sub Category</option>
-                                                                <option value='Mens'>Men's</option>
-                                                                <option value='Women'>Women</option>
-                                                                <option value='Mobile'>Mobile</option>
-                                                                <option value='Laptops'>Laptops</option>
-                                                             </select>
+                                            <option>Sub Sub Category</option>
+                                            <option value='Mens'>Men's</option>
+                                            <option value='Women'>Women</option>
+                                            <option value='Mobile'>Mobile</option>
+                                            <option value='Laptops'>Laptops</option>
+                                        </select>
                                     </div>
                                     <div className='mb-5 p-1'>
                                         <label for="name" className='p-1 block font-medium text-gray-900'>Select Colour</label>
                                         <select name='parentCatName' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Colour</option>
-                                                                <option value='Red'>Red</option>
-                                                                <option value='Blue'>Blue</option>
-                                                                <option value='Yellow'>Yellow</option>
-                                                                <option value='Pink'>Pink</option>
-                                                             </select>
+                                            <option>Colour</option>
+                                            <option value='Red'>Red</option>
+                                            <option value='Blue'>Blue</option>
+                                            <option value='Yellow'>Yellow</option>
+                                            <option value='Pink'>Pink</option>
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
                                         <label for="order" className='p-1 block font-medium text-gray-900'>Is Best Selling</label>
                                         <select name='best_selling' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Nothing Selected</option>
-                                                                <option value='Yes'>Yes</option>
-                                                                 <option value='No'>No</option>
-                                                              </select>
+                                            <option>Nothing Selected</option>
+                                            <option value='Yes'>Yes</option>
+                                            <option value='No'>No</option>
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
                                         <label for="name" className='p-1 block font-medium text-gray-900'>Is UpSell </label>
                                         <select name='upsell' className='text-[20px] border-2 py-2 px-2 block shadow-md
                                                              border-gray-400 w-full rounded-lg focus:border-blue-500'>
-                                                                <option>Nothing Selected</option>
-                                                                <option value='Yes'>Yes</option>
-                                                                 <option value='No'>No</option>
-                                                              </select>
+                                            <option>Nothing Selected</option>
+                                            <option value='Yes'>Yes</option>
+                                            <option value='No'>No</option>
+                                        </select>
                                     </div>
 
                                     <div className='mb-5 p-1'>
@@ -226,7 +229,9 @@ export default function Add_Product() {
                                     </div>
                                 </div>
 
-
+                            <div className="mt-5 h-[200px]">
+                                    <ReactQuill theme="snow" className="" />
+                                  </div>
 
                             </div>
 

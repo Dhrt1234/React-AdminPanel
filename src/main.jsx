@@ -32,6 +32,8 @@ import View_Faq from './pages/Faq/View_faq'
 import Add_Product from './pages/Product/Add_Product'
 import View_Product from './pages/Product/View_Product'
 import Order from './pages/Order/Order'
+import Profile from './pages/Profile'
+import Company_Profile from './pages/Company_Profile'
   createRoot(document.getElementById('root')).render(
     <StrictMode>
      <BrowserRouter>
@@ -65,6 +67,8 @@ import Order from './pages/Order/Order'
         <Route path='/add-product' element={<Add_Product/>} />
         <Route path='/view-product' element={<View_Product />} />
         <Route path='/order' element={<Order />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/company_profile' element={<Company_Profile />} />
         </Route>
         
         <Route path='/login' element={<Login />} />
